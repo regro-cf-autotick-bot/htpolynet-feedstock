@@ -14,7 +14,7 @@ build:
     - htpolynet = HTPolyNet.driver:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,6 +32,7 @@ requirements:
     - networkx >=2.8
     - gputil >=1.4
     - matplotlib-base
+    - ambertools
 
 test:
   imports:
