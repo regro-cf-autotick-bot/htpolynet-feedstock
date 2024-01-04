@@ -1,5 +1,5 @@
 {% set name = "htpolynet" %}
-{% set version = "1.0.7.3" %}
+{% set version = "1.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/htpolynet-{{ version }}.tar.gz
-  sha256: 8c20c631f9bb8634e7bd83338d37502994fdce6692652d01410b5f330b25e2f5
+  sha256: b771566f584a1781414d54e53875941a49e57511d9a597adb5de9b2b5fa72b2b
 
 build:
   entry_points:
     - htpolynet = HTPolyNet.driver:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
